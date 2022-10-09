@@ -1,0 +1,34 @@
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.csproj.AssemblyReference.cache
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.AssemblyInfoInputs.cache
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.AssemblyInfo.cs
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.csproj.CoreCompileInputs.cache
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\moneytrack operations.exe
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\moneytrack operations.deps.json
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\moneytrack operations.runtimeconfig.json
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\moneytrack operations.dll
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\moneytrack operations.pdb
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.dll
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\refint\moneytrack operations.dll
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.pdb
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.genruntimeconfig.cache
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\ref\moneytrack operations.dll
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\obj\Debug\net6.0\moneytrack operations.csproj.CopyComplete
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\moneytrack operations.exe
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\moneytrack operations.deps.json
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\moneytrack operations.runtimeconfig.json
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\moneytrack operations.dll
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\moneytrack operations.pdb
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.csproj.AssemblyReference.cache
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.AssemblyInfoInputs.cache
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.AssemblyInfo.cs
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.csproj.CoreCompileInputs.cache
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.csproj.CopyComplete
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.dll
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\refint\moneytrack operations.dll
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.pdb
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\moneytrack operations.genruntimeconfig.cache
+C:\Users\vigop\Source\Repos\MoneyTracking-Project\obj\Debug\net6.0\ref\moneytrack operations.dll

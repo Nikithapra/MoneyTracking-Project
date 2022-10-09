@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nYhV2pD65/0gLQRDSF0g8LWELPwgIuhMmOWGIyse5YiFV8xAsMokclOSlumIRmeOugegr8qarDS29V+Ubpeitg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\moneytrack operations.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vigop\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
