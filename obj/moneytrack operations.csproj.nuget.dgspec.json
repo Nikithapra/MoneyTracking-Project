@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\moneytrack operations.csproj": {}
+    "C:\\Users\\vigop\\source\\repos\\MoneyTracking-Project\\moneytrack operations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\moneytrack operations.csproj": {
+    "C:\\Users\\vigop\\source\\repos\\MoneyTracking-Project\\moneytrack operations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\moneytrack operations.csproj",
+        "projectUniqueName": "C:\\Users\\vigop\\source\\repos\\MoneyTracking-Project\\moneytrack operations.csproj",
         "projectName": "moneytrack operations",
-        "projectPath": "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\moneytrack operations.csproj",
+        "projectPath": "C:\\Users\\vigop\\source\\repos\\MoneyTracking-Project\\moneytrack operations.csproj",
         "packagesPath": "C:\\Users\\vigop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vigop\\source\\repos\\moneytrack operations\\moneytrack operations\\obj\\",
+        "outputPath": "C:\\Users\\vigop\\source\\repos\\MoneyTracking-Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vigop\\AppData\\Roaming\\NuGet\\NuGet.Config",

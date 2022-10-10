@@ -1,5 +1,9 @@
 ﻿//Monye tracking Operations
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.Diagnostics;
+
 public class Transactions
 {
     private int Balance;
@@ -24,18 +28,18 @@ public class Transactions
                                      .ToList();
             //displaying list
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10)+ "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.Green;
 
            
             foreach (MoneyTracking t in sortitems)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(15) +
-                t.Transtype.PadRight(17) + t.Amount.ToString().PadRight(10));
+                Console.WriteLine(t.Month.PadRight(10) + t.id.ToString().PadRight(10) + t.Title.PadRight(15) +
+                t.Transtype.PadRight(14) + t.Amount.ToString().PadRight(10));
             }
         }
         Console.ResetColor();
@@ -49,14 +53,14 @@ public class Transactions
           
             Console.ForegroundColor = ConsoleColor.Green;
             //displaying list
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(9) + "TransType(Incomes)".PadRight(20) + "Amount".PadRight(10));
+            Console.WriteLine("---------------------------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10) + "Title".PadRight(9) + "TransType(Incomes)".PadRight(20) + "Amount".PadRight(10));
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------------");
 
             foreach (var t in displayincome)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(15) +
+                Console.WriteLine(t.Month.PadRight(10) + t.id.ToString().PadRight(10) + t.Title.PadRight(15) +
                 t.Transtype.PadRight(15) + t.Amount.ToString().PadRight(10));
             }
         }
@@ -69,17 +73,17 @@ public class Transactions
 
             Balance = sumincome - sumexpense;
             //displaying list
-            Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(9) + "TransType(Expense)".PadRight(12) + "Amount".PadRight(10));
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10)+ "Title".PadRight(9) + "TransType(Expe)".PadRight(12) + "Amount".PadRight(10));
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("-------------------------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.Green;
             foreach (MoneyTracking t in displayexpense)
             {
 
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(10) +
-                t.Transtype.PadRight(14) + t.Amount.ToString().PadRight(10));
+                Console.WriteLine(t.Month.PadRight(10) + t.id.ToString().PadRight(10) + t.Title.PadRight(10) +
+                t.Transtype.PadRight(17) + t.Amount.ToString().PadRight(10));
 
             }
         }
@@ -99,6 +103,8 @@ public class Transactions
         //adding income
         if (option1 == "1")
         {
+            Console.WriteLine("Enter the Id:");
+            item.id = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the  Title of transaction:");
             item.Title = Console.ReadLine();
             Console.WriteLine("Enter the  Month of transaction:");
@@ -120,13 +126,13 @@ public class Transactions
                                      .ToList();
             //displaying list
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------");
             foreach (MoneyTracking t in sortitems)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(15) +
+                Console.WriteLine(t.Month.PadRight(10) + t.id.ToString().PadRight(10) + t.Title.PadRight(15) +
               t.Transtype.PadRight(17) + t.Amount.ToString().PadRight(10));
             }
             //save file
@@ -138,6 +144,9 @@ public class Transactions
         //adding Expense
         if (option1 == "2")
         {
+            Console.WriteLine("Enter the Trans-ID:");
+            item.id = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Enter the  Title of transaction:");
             item.Title = Console.ReadLine();
             Console.WriteLine("Enter the  Month of transaction:");
@@ -158,13 +167,13 @@ public class Transactions
                                      .ToList();
             //displaying list
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine("Month".PadRight(12) + "Trans-ID".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
 
-            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
             foreach (MoneyTracking t in sortitems)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(15) +
+                Console.WriteLine(t.Month.PadRight(10) + t.id.ToString().PadRight(10) + t.Title.PadRight(15) +
               t.Transtype.PadRight(17) + t.Amount.ToString().PadRight(10));
             }
             //save file
@@ -185,29 +194,36 @@ public class Transactions
 
         if (option1 == "1")
         {
-            Console.WriteLine("Enter item title to be edited");
-            string til = Console.ReadLine();
+            Console.WriteLine("Enter Trans-ID to be edited");
+            int id = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Which fields in item  you want to edit:\n" +
-                "(1) Transtitle\n" +"(2) Transtype\n" +"(3) Amount \n" + "(4) Month");
+               "(1) Trans-ID\n "+"(2) Transtitle\n"+" (3) Transtype\n" +"(4) Amount \n" + "(5) Month");
            Console.WriteLine("pick  an option");
             string opt = Console.ReadLine();
 
             foreach (var t in items)
             {
-                if (t.Title == til && opt == "1")
+                if (t.id == id && opt == "1")
+                {
+                    Console.WriteLine("Enter Replaced Trans-ID:");
+                    int rid = int.Parse(Console.ReadLine());
+                    t.id = rid;
+                }
+
+                if (t.id == id && opt == "2")
                 {
                     Console.WriteLine("Enter replaced item Title ");
                     string y = Console.ReadLine();
                     t.Title = y;
                 }
-                if (t.Title == til && opt == "4")
+                if (t.id==id && opt == "5")
                 {
                     Console.WriteLine("Enter replaced item Month ");
                     string m1 = Console.ReadLine();
                     t.Month = m1;
                 }
-                if (t.Title == til && opt == "2")
+                if (t.id == id && opt == "3")
                 {
                     Console.WriteLine("Enter replaced item transtype ");
                     string ty = Console.ReadLine();
@@ -217,7 +233,7 @@ public class Transactions
                     else if(t.Transtype == "Expense")
                         Balance=Balance-t.Amount;
                 }
-                if (t.Title == til && opt == "3")
+                if (t.id == id && opt == "4")
                 {
                     prebal = t.Amount;
                     Console.WriteLine("Enter replaced item Amount ");
@@ -252,15 +268,15 @@ public class Transactions
             
             Console.WriteLine("Items after edited");
             //displaying list
-            Console.WriteLine("----------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(9) + "TransType".PadRight(12) + "Amount".PadRight(10));
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10) + "Title".PadRight(12) + "TransType".PadRight(12) + "Amount".PadRight(10));
 
-            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("----------------------------------------------------");
 
             foreach (var t in sortitems)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(10) +
-               t.Transtype.PadRight(16) + t.Amount.ToString().PadRight(10));
+                Console.WriteLine(t.Month.PadRight(12) + t.id.ToString().PadRight(10) + t.Title.PadRight(12) +
+               t.Transtype.PadRight(13) + t.Amount.ToString().PadRight(10));
 
             }
             Console.ResetColor();
@@ -274,25 +290,32 @@ public class Transactions
         //remove item
         if (option1 == "2")
         {
-            Console.WriteLine("Enter item index to be Removed");
-            int rem = int.Parse(Console.ReadLine());
-            items.RemoveAt(rem);
-            
-            Console.WriteLine("Items after removal");
-            //sorting list by  month,amount 
+            Console.WriteLine("Enter item Id to remove");
+             int  rem = int.Parse(Console.ReadLine());
+
+            for (int i = items.Count - 1; i >= 0; i--)
+            {
+                if (items[i].id == rem)
+                {
+                    items.RemoveAt(i);
+                }
+            }
+          
             List<MoneyTracking> sortitems = items.OrderBy(it => it.Month)
                                      .ThenBy(it => it.Amount)
                                      .ToList();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine("Month".PadRight(10) + "Title".PadRight(9) + "TransType".PadRight(12) + "Amount".PadRight(10));
+            Console.ForegroundColor= ConsoleColor.Green;
+            //displaying list
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10) + "Title".PadRight(9) + "TransType".PadRight(12) + "Amount".PadRight(10));
 
-            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("----------------------------------------------");
+
 
             foreach (var t in sortitems)
             {
-                Console.WriteLine(t.Month.PadRight(10) + t.Title.PadRight(12) +
-               t.Transtype.PadRight(12) + t.Amount.ToString().PadRight(10));
+                Console.WriteLine(t.Month.PadRight(10)+t.id.ToString().PadRight(10)  + t.Title.PadRight(10) +
+               t.Transtype.PadRight(13) + t.Amount.ToString().PadRight(10));
 
             }
             Console.ResetColor();

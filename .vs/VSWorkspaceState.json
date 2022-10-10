@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin",
+    "\\json"
   ],
-  "SelectedNode": "\\C:\\Users\\vigop\\Source\\Repos\\MoneyTracking-Project",
+  "SelectedNode": "\\Transactions.cs",
   "PreviewInSolutionExplorer": false
 }
