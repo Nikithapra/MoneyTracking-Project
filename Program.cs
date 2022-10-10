@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 //reading from file to List items
 
-string fileName = (@"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json");
+string fileName = (@"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json");
 string jsonString = File.ReadAllText(fileName);
 List<MoneyTracking> items = JsonConvert.DeserializeObject<List<MoneyTracking>>(jsonString);
 

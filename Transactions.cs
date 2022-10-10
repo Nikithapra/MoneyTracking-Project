@@ -103,7 +103,7 @@ public class Transactions
         //adding income
         if (option1 == "1")
         {
-            Console.WriteLine("Enter the Id:");
+            Console.WriteLine("Enter the Trams-ID:");
             item.id = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the  Title of transaction:");
             item.Title = Console.ReadLine();
@@ -137,7 +137,7 @@ public class Transactions
             }
             //save file
             string JSONresult = JsonConvert.SerializeObject(sortitems);
-            string path = @"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json";
+            string path = @"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json";
             File.WriteAllText(path, JSONresult);
 
         }
@@ -168,7 +168,7 @@ public class Transactions
             //displaying list
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("-----------------------------------------------------------");
-            Console.WriteLine("Month".PadRight(12) + "Trans-ID".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
+            Console.WriteLine("Month".PadRight(10) + "Trans-ID".PadRight(10) + "Title".PadRight(10) + "TransType(Inc,Exp)".PadRight(20) + "Amount".PadRight(10));
 
             Console.WriteLine("------------------------------------------------------------");
             foreach (MoneyTracking t in sortitems)
@@ -178,7 +178,7 @@ public class Transactions
             }
             //save file
             string JSONresult = JsonConvert.SerializeObject(sortitems);
-            string path = @"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json";
+            string path = @"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json";
             File.WriteAllText(path, JSONresult);
 
         }
@@ -282,7 +282,7 @@ public class Transactions
             Console.ResetColor();
             //save file
             string JSONresult = JsonConvert.SerializeObject(items);
-            string path = @"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json";
+            string path = @"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json";
             File.WriteAllText(path, JSONresult);
 
         }
@@ -321,7 +321,7 @@ public class Transactions
             Console.ResetColor();
             //save file
             string JSONresult = JsonConvert.SerializeObject(items);
-            string path = @"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json";
+            string path = @"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json";
             File.WriteAllText(path, JSONresult);
 
         }
@@ -336,7 +336,7 @@ public class Transactions
                                   .ThenBy(it => it.Title)
                                  .ToList();
         string JSONresult = JsonConvert.SerializeObject(items);
-        string path = @"C:\Users\vigop\source\repos\moneytrack operations\moneytrack operations\json\MoneyTracking.json";
+        string path = @"C:\Users\vigop\source\repos\MoneyTracking-Project\json\MoneyTracking.json";
         if (File.Exists(path))
         {
             File.Delete(path);
